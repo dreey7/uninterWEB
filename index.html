@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Tarefas</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="main-div">
+        <div id="form">  
+                <h1>Cadastrar Tarefa</h1>       
+                <form id="formTarefa">
+                    <input type="hidden" id="index">
+                    <label for="titulo">Titulo:</label>
+                    <input type="text" name="titulo" id="titulo" placeholder="Título" required>
+                    <br>
+                    <label for="descricao">Descrição:</label>
+                    <input name="desc" type="text" id="descricao" placeholder="Descrição" required>
+                    <br>
+                    <label for="data">Data de criação:</label>
+                    <input type="date" id="data" required>
+                    <br>
+                    <label for="prioridade">Prioridade:</label>
+                    <br>
+                    <select name="prioridade" id="prioridade" required>
+                        <option value="baixa">Baixa</option>
+                        <option value="media">Média</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                    <br>
+                    <input type="hidden" id="status" value="Pendente">
+                    </select>
+                    <button type="submit">SALVAR</button>
+                </form>
+                <section id="resultado" aria-live="polite"></section><br>
+                <a href="concluidas.html">Tarefas Concluidas</a> 
+        </div>
+        <div id="cards">
+            <div id="buscar-d">
+                <input type="text" id="busca" placeholder="Buscar matéria">
+                <button class="buscar" onclick="buscarTarefa()">Buscar</button>
+                <button class="tudo" onclick="listarTarefa()">Mostrar Todos</button>
+            </div>
+            <!-- DIV PARA CHAMAR CADA CARD DE TAREFA -->
+            <div id="item"></div>
+        </div>
+    </div>
+    <footer></footer>
+    <!-- LINK PARA O JAVASCRIPT -->
+    <script src="assets/js/tarefas.js">
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</body>
+</html>

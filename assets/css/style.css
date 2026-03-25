@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+/* STYLE FORMULARIO DE CADASTRO */
+
+#main-div {
+    display: flex;
+}
+
+#form {
+    background-color: rgba(196, 196, 196, 0.433);
+    width: 250px;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#form a {
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+}
+
+#form h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 24px;
+}
+
+#form input {
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form label {
+    font-style: italic;
+}
+
+#form select {
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#form button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#form button:hover {
+    background-color: #327734;
+    cursor: pointer;
+}
+
+/* STYLE BOTAO DE BUSCAR E MOSTRAR TODOS */
+
+#buscar-d {
+    margin-top: 30px;
+    margin-left: 30px
+}
+
+#buscar-d input {
+    border-style:solid;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.199);
+    background-color: rgba(128, 128, 128, 0.12);
+    padding: 5px;
+    width: 300px;
+}
+
+#buscar-d button {
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+}
+
+#buscar-d .buscar {
+    background-color: #4CAF50;
+}
+
+#buscar-d .buscar:hover {
+    background-color: #78c27a;
+}
+
+#buscar-d .tudo {
+    background-color: #fdce6f;
+}
+
+#buscar-d .tudo:hover {
+    background-color: #d0a44c;
+}
+
+#buscar-d button {
+    cursor: pointer;
+}
+
+/* STYLE DOS CARDS */
+
+#cards {
+    margin-left: 350px;
+}
+
+#item {
+    display: flex;
+    color: rgb(0, 0, 0);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:20px;
+    margin-top: 30px;
+    padding: 0px 25px;
+    align-items: stretch;
+    
+}
+
+#item #item-tarefa {
+    padding: 5px 30px;
+    border-radius: 30px 0px 30px 0px;
+    width: 200px;
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.316);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#item-tarefa {
+    background: #f5f5f530;
+    border-left: 6px solid  
+}
+
+/* Prioridades da tarefa */
+#item-tarefa.baixa {
+  border-left-color: #4CAF50; /* verde */       
+}
+
+#item-tarefa.media {
+  border-left-color: #FFC107; /* amarelo */
+}
+
+#item-tarefa.alta {
+  border-left-color: #F44336; /* vermelho */
+}
+
+.item-titulo {
+    text-align: center;
+    font-size: 19px;
+    margin: 10px 0px;
+    text-transform: capitalize; 
+}
+
+.acoes {
+    margin-top: auto; 
+}
+
+.botao {
+    width: 100%;
+    font-size: 15px;
+    border-style: none;
+    padding: 5px;
+}
+
+.editar {
+    background-color: orange;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.editar:hover {
+    background-color: rgb(143, 107, 39);
+    cursor: pointer;
+}
+
+.excluir{
+    background-color: red;
+    margin-bottom: 5px;
+}
+
+.excluir:hover {
+    background-color: rgb(144, 28, 28);
+    cursor: pointer;
+}
+
+.concluir {
+    background-color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.concluir:hover {
+    background-color: #229326;
+    cursor: pointer;
+}
+
+/* STYLE DOS CARDS CONCLUIDOS */
+
+#cards {
+    margin-left: 350px;
+}
+
+#item-c {
+    display: flex;
+    color: rgb(0, 0, 0);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:20px;
+    margin-top: 30px;
+    padding: 0px 25px;
+    align-items: stretch;
+}
+
+#item-c #item-tarefa {
+    padding: 5px 30px;
+    border-radius: 30px 0px 30px 0px;
+    width: 200px;
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.316);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 480px) {
+  
+    #main-div {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    #form {
+        background-color: rgba(196, 196, 196, 0.433);
+        width: 100%;
+        padding: 15px;
+        height: auto;
+        position: unset;
+        box-sizing: border-box;
+    }
+
+    #form input {
+        border: none;
+        padding: 5px;
+        border-radius: 2px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+        #form select {
+        border: none;
+        padding: 5px;
+        border-radius: 2px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #cards {
+        margin-left: 0px;
+        padding: 10px;
+
+    }
+
+    #item {
+        display: flex;
+        color: rgb(0, 0, 0);
+        flex-direction: column;
+        gap:20px;
+        margin-top: 30px;
+        padding: 0px 25px;
+        align-items: center;
+}
+
+    #buscar-d {
+        margin-top: 30px;
+        margin-left: 10px;
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #buscar-d input {
+        border-style:solid;
+        border-width: 1px;
+        border-color: rgba(128, 128, 128, 0.199);
+        background-color: rgba(128, 128, 128, 0.12);
+        padding: 5px;
+        width: 200px;
+}
+
+    footer {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(196, 196, 196, 0.433);
+        height: 30px;
+        margin-top: auto;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif;
+        background-color: rgb(255, 255, 255);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #item {
+        margin-bottom: 10px;
+    }
+
+}
